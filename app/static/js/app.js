@@ -104,6 +104,9 @@ cloudbreakApp.run(function ($rootScope, $http) {
             "DELETE_COMPLETED": $rootScope.error_msg.title_delete_completed
         }
     });
+    $http.get('tooltip.properties').then(function (messages) {
+        $rootScope.tooltips = messages.data
+    });
 });
 
 cloudbreakApp.directive('startdatevalidation', function($parse) {

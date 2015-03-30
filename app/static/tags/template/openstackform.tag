@@ -4,6 +4,7 @@
 
         <div class="col-sm-9">
             <input type="text" class="form-control" ng-pattern="/^[a-zA-Z][-a-zA-Z0-9]*$/" name="openstack_tclusterName" ng-model="openstackTemp.name" ng-minlength="5" ng-maxlength="100" required id="openstack_tclusterName" placeholder="min. 5 max. 100 char">
+            <div class="input-group-addon btn btn-info" data-toggle="popover" title="{{tooltips.template_name}}">?</div>
             <div class="help-block" ng-show="openstackTemplateForm.openstack_tclusterName.$dirty && openstackTemplateForm.openstack_tclusterName.$invalid">
                 <i class="fa fa-warning"></i> {{error_msg.template_name_invalid}}
             </div>
@@ -17,6 +18,7 @@
 
         <div class="col-sm-9">
             <input type="text" class="form-control" name="openstack_tdescription" ng-model="openstackTemp.description" ng-maxlength="1000" id="openstack_tdescription" placeholder="max. 1000 char">
+            <div class="input-group-addon btn btn-info" data-toggle="popover" title="{{tooltips.template_description}}">?</div>
             <div class="help-block" ng-show="openstackTemplateForm.openstack_tdescription.$dirty && openstackTemplateForm.openstack_tdescription.$invalid">
                 <i class="fa fa-warning"></i> {{error_msg.template_description_invalid}}
             </div>

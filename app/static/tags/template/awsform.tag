@@ -3,8 +3,19 @@
         <label class="col-sm-3 control-label" for="aws_tclusterName">Name</label>
 
         <div class="col-sm-9">
-            <input type="text" class="form-control" ng-pattern="/^[a-zA-Z][-a-zA-Z0-9]*$/" name="aws_tclusterName" ng-model="awsTemp.name" ng-minlength="5" ng-maxlength="100" required id="aws_tclusterName" placeholder="min. 5 max. 100 char">
-            <div class="help-block" ng-show="awsTemplateForm.aws_tclusterName.$dirty && awsTemplateForm.aws_tclusterName.$invalid">
+            <div class="input-group  col-md-12">
+              <div class="row">
+                <div class="col-md-11">
+                  <input type="text" class="form-control" ng-pattern="/^[a-zA-Z][-a-zA-Z0-9]*$/" name="aws_tclusterName" ng-model="awsTemp.name" ng-minlength="5" ng-maxlength="100" required id="aws_tclusterName" placeholder="min. 5 max. 100 char">
+                </div>
+                <div class="col-md-1">
+                  <a type="button" class="btn btn-info" tooltip-trigger="mouseenter" tooltip-placement="right" tooltip="Tooltip on left" tooltip-append-to-body="true">
+                    <i class="fa fa-info"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="help-block"  ng-show="awsTemplateForm.aws_tclusterName.$dirty && awsTemplateForm.aws_tclusterName.$invalid">
                 <i class="fa fa-warning"></i> {{error_msg.template_name_invalid}}
             </div>
         </div>
@@ -17,6 +28,7 @@
 
         <div class="col-sm-9">
             <input type="text" class="form-control" name="aws_tdescription" ng-model="awsTemp.description" ng-maxlength="1000" id="aws_tdescription" placeholder="max. 1000 char">
+            <div class="input-group-addon btn btn-info" data-toggle="popover" title="{{tooltips.template_description}}">?</div>
             <div class="help-block" ng-show="awsTemplateForm.aws_tdescription.$dirty && awsTemplateForm.aws_tdescription.$invalid">
                 <i class="fa fa-warning"></i> {{error_msg.template_description_invalid}}
             </div>
