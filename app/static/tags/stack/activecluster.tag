@@ -32,7 +32,7 @@
                                 <div class="col-sm-9">
                                     <p id="sl_ambariServerIp" class="form-control-static">
                                         <div ng-if="activeCluster.ambariServerIp != null">
-                                            <a ng-show="activeCluster.ambariServerIp != null" target="_blank" href="http://{{activeCluster.ambariServerIp}}:8080">http://{{activeCluster.ambariServerIp}}:8080</a>
+                                            <a ng-show="activeCluster.ambariServerIp != null" target="_blank" href="http://{{activeCluster.ambariServerIp}}">http://{{activeCluster.ambariServerIp}}</a>
                                         </div>
                                         <div ng-if="activeCluster.ambariServerIp == null">
                                             <a ng-show="activeCluster.ambariServerIp == null" target="_blank" href="">Not Available</a>
